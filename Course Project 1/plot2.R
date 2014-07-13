@@ -1,4 +1,5 @@
-data <- read.table("household_power_consumption.txt", header=TRUE, sep=";")
+## Load only the first 100000 records to improve loading of dataset
+data <- read.table("household_power_consumption.txt", header=TRUE, sep=";", nrows=100000)
 
 ## Subset the electric power consumption to the required dates
 data <- subset(data, Date=="1/2/2007" | Date =="2/2/2007")
